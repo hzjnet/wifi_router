@@ -1,0 +1,376 @@
+Source-Makefile: package/qca-legacy-uboot/Makefile
+Package: qca-legacy-uboot-ap121
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: ap121
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap121
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap121
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-ap135
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: ap135
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap135
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap135
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-ap135-nand
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx +qca-romboot-qca955x
+Menu-Depends: 
+Provides: 
+Build-Variant: ap135-nand
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap135-nand
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap135-nand
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-ap136
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: ap136
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap136
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap136
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-ap137-16M
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: ap137-16M
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap137-16M
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap137-16M
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-db12x
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: db12x
+Section: boot
+Category: Boot Loaders
+Title: U-boot for db12x
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for db12x
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-cus227
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx +qca-romboot-ar934x
+Menu-Depends: 
+Provides: 
+Build-Variant: cus227
+Section: boot
+Category: Boot Loaders
+Title: U-boot for cus227
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for cus227
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-db12x-16M
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: db12x-16M
+Section: boot
+Category: Boot Loaders
+Title: U-boot for db12x-16M
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for db12x-16M
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-ap143-16M
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: ap143-16M
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap143-16M
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap143-16M
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-ap143-32M
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: ap143-32M
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap143-32M
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap143-32M
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-ap147-8M
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: ap147-8M
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap147-8M
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap147-8M
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-ap147-16M
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: ap147-16M
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap147-16M
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap147-16M
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-ap151-8M
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: ap151-8M
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap151-8M
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap151-8M
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-ap151-16M
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: ap151-16M
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap151-16M
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap151-16M
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-ap152-8M
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: ap152-8M
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap152-8M
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap152-8M
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-ap152-16M
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: ap152-16M
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap152-16M
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap152-16M
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-ap152-dual
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: ap152-dual
+Section: boot
+Category: Boot Loaders
+Title: U-boot for ap152-dual
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for ap152-dual
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-apjet01
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: apjet01
+Section: boot
+Category: Boot Loaders
+Title: U-boot for apjet01
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for apjet01
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-cus531-16M
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: cus531-16M
+Section: boot
+Category: Boot Loaders
+Title: U-boot for cus531-16M
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for cus531-16M
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-cus531-32M
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: cus531-32M
+Section: boot
+Category: Boot Loaders
+Title: U-boot for cus531-32M
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for cus531-32M
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-cus531-dual
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: cus531-dual
+Section: boot
+Category: Boot Loaders
+Title: U-boot for cus531-dual
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for cus531-dual
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: qca-legacy-uboot-cus531-nand
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread @TARGET_ar71xx
+Menu-Depends: 
+Provides: 
+Build-Variant: cus531-nand
+Section: boot
+Category: Boot Loaders
+Title: U-boot for cus531-nand
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-legacy-uboot-g.tar.gz
+Type: ipkg
+Description: U-boot for cus531-nand
+http://www.denx.de/wiki/U-Boot
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+

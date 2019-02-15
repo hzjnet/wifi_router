@@ -1,0 +1,90 @@
+Source-Makefile: target/linux/ipq806x/Makefile
+Target: ipq806x
+Target-Board: ipq806x
+Target-Name: QCA IPQ806X
+Target-Path: /home/colt/qsdk
+Target-Arch: arm
+Target-Arch-Packages: ipq806x
+Target-Features: dtc gpio pci squashfs targz ubifs usb usbgadget
+Target-Depends: 
+Target-Optimization: -Os -pipe -march=armv7-a -mfpu=vfpv3-d16 -mfloat-abi=softfp
+Linux-Version: 3.4.103
+Linux-Release: 1
+Linux-Kernel-Arch: arm
+Target-Description:
+	Build firmware images for Qualcomm Atheros IPQ806x (arm) platform.
+@@
+Default-Packages: base-files libc libgcc busybox dropbear mtd uci opkg hotplug2 netifd dnsmasq iptables ppp ppp-mod-pppoe kmod-ipt-nathelper firewall mtd-utils mtd-utils-mkfs.ubifs mtd-utils-ubiattach mtd-utils-ubidetach mtd-utils-ubiformat mtd-utils-ubimkvol mtd-utils-ubiupdatevol kmod-button-hotplug uboot-envtools swconfig kmod-input-gpio-keys kmod-qca-nss-drv kmod-qca-nss-gmac kmod-leds-gpio kmod-ledtrig-default-on kmod-ledtrig-timer kmod-ledtrig-netdev kmod-usb-gadget kmod-usb-gadget-dwc3 kmod-usb-gadget-dwc3-ipq kmod-usb-core kmod-usb2 kmod-usb-xhci uboot-ipq806x kmod-ledtrig-usbdev uboot-ipq806x-fwupgrade-tools
+Target-Profile: Default
+Target-Profile-Name: Default Profile (minimum package set)
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-ledtrig-usbdev
+Target-Profile-Config: 
+
+@@
+Target-Profile-Description:
+	Default package set compatible with most boards.
+@@
+
+Target-Profile: QSDK_Open
+Target-Profile-Name: Qualcomm-Atheros SDK Open Profile
+Target-Profile-Packages: kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-ledtrig-usbdev kmod-ath9k wpad-mini kmod-qca-nss-connmgr-noload
+Target-Profile-Config: 
+
+@@
+Target-Profile-Description:
+	QSDK Open package set configuration.
+	This profile includes only open source packages and provides basic Wi-Fi router features using the QCA upstream Linux Wi-Fi driver. It supports:
+	-Bridging and routing networking
+	-LuCI web configuration interface
+	-Integrated 11abgn support using the ath9k driver
+@@
+
+Target-Profile: QSDK_Standard
+Target-Profile-Name: Qualcomm-Atheros SDK Standard Profile
+Target-Profile-Packages: luci uhttpd kmod-ipt-nathelper-extra luci-app-upnp kmod-usb-storage kmod-fs-msdos kmod-fs-ntfs kmod-fs-vfat kmod-sound-core kmod-sound-soc-ipq806x alsa kmod-ipt-ipopt ntfs-3g dosfsck e2fsprogs iozone fdisk mkdosfs kmod-ipt-conntrack-qos kmod-nls-cp437 kmod-nls-iso8859-1 sysstat mcproxy kmod-ipt-nathelper-rtsp kmod-ipv6 iperf devmem2 ip ethtool ip6tables ds-lite rstp quagga quagga-ripd quagga-zebra quagga-watchquagga quagga-vtysh rp-pppoe-relay -dnsmasq dnsmasq-dhcpv6 radvd wide-dhcpv6-client luci-app-samba luci-proto-6x4 bridge luci-app-ddns ddns-scripts mdadm kmod-md-mod kmod-md-linear kmod-md-raid0 kmod-md-raid1 iputils-tracepath iputils-tracepath6 kmod-qca-ssdk-nohnat qca-ssdk-shell file pure-ftpd kmod-qca-nss-drv-qdisc xl2tpd ppp-mod-pptp pm-utils kmod-qca-nss-macsec qca-thermald rng-tools perf kmod-nat-sctp kmod-aq_phy kmod-qca_85xx_sw aq-fw-download kmod-regmap-i2c i2c-tools qca-mcs-apps kmod-crypto-aes kmod-ipsec kmod-ipsec4 kmod-ipsec6 lacpd streamboost-noload kmod-qca-nss-ecm hyfi hyfi-ui kmod-qca-nss-drv-profile kmod-qca-nss-drv-tun6rd kmod-qca-nss-drv-tunipip6 qca-nss-fw2-retail luci-app-openswan openswan-nss kmod-openswan-nss kmod-qca-nss-drv-ipsecmgr kmod-crypto-ocf kmod-qca-nss-crypto kmod-qca-nss-cfi kmod-qca-wifi-akronite-perf kmod-art2 qca-hostap-10.4 qca-hostapd-cli-10.4 qca-wpa-supplicant-10.4-macsec qca-wpa-cli-10.4 qca-spectral qca-wapid sigma-dut-10.4 qca-acfg qca-wrapd whc whc-ui qca-thermald-10.4 qca-wifi-fw-hw1-10.2 qca-wifi-fw-hw1-10.2-lteu qca-wifi-fw-hw1-10.2-maxclients qca-wifi-fw-hw2-10.2 kmod-qca-ath3k bluez btconfig kmod-qca-wil6210 wigig-firmware-ipdock iwinfo kmod-bootconfig
+Target-Profile-Config: 
+
+@@
+Target-Profile-Description:
+	QSDK Standard package set configuration.
+	This profile provides basic Wi-Fi router features using the QCA 10.2 Wi-Fi driver. It supports:
+	-Bridging and routing networking
+	-LuCI web configuration interface
+	-Integrated 11abgn/ac support using the qca-wifi driver
+@@
+
+Target-Profile: QSDK_Standard_Beeliner
+Target-Profile-Name: Qualcomm-Atheros SDK Standard Beeliner Profile
+Target-Profile-Packages: luci uhttpd kmod-ipt-nathelper-extra luci-app-upnp kmod-usb-storage kmod-fs-msdos kmod-fs-ntfs kmod-fs-vfat kmod-sound-core kmod-sound-soc-ipq806x alsa kmod-ipt-ipopt ntfs-3g dosfsck e2fsprogs iozone fdisk mkdosfs kmod-ipt-conntrack-qos kmod-nls-cp437 kmod-nls-iso8859-1 sysstat mcproxy kmod-ipt-nathelper-rtsp kmod-ipv6 iperf devmem2 ip ethtool ip6tables ds-lite rstp quagga quagga-ripd quagga-zebra quagga-watchquagga quagga-vtysh rp-pppoe-relay -dnsmasq dnsmasq-dhcpv6 radvd wide-dhcpv6-client luci-app-samba luci-proto-6x4 bridge luci-app-ddns ddns-scripts mdadm kmod-md-mod kmod-md-linear kmod-md-raid0 kmod-md-raid1 iputils-tracepath iputils-tracepath6 kmod-qca-ssdk-nohnat qca-ssdk-shell file pure-ftpd kmod-qca-nss-drv-qdisc xl2tpd ppp-mod-pptp pm-utils kmod-qca-nss-macsec qca-thermald rng-tools perf kmod-nat-sctp kmod-aq_phy kmod-qca_85xx_sw aq-fw-download kmod-regmap-i2c i2c-tools qca-mcs-apps kmod-crypto-aes kmod-ipsec kmod-ipsec4 kmod-ipsec6 lacpd streamboost-noload kmod-qca-nss-ecm hyfi hyfi-ui kmod-qca-nss-drv-tun6rd kmod-qca-nss-drv-tunipip6 qca-nss-fw2-retail kmod-qca-nss-drv-l2tpv2 kmod-qca-nss-drv-pptp luci-app-openswan openswan-nss kmod-openswan-nss kmod-qca-nss-drv-ipsecmgr kmod-crypto-ocf kmod-qca-nss-crypto kmod-qca-nss-cfi kmod-qca-wifi-unified-profile kmod-art2 qca-hostap qca-hostapd-cli qca-wpa-supplicant-macsec qca-wpa-cli qca-wapid sigma-dut-10.4 qca-wpc qca-acfg qca-wrapd qca-spectral qcmbr-10.4 whc whc-ui qca-wifi-fw-hw2-10.4-asic qca-wifi-fw-hw3-10.4-asic qca-wifi-fw-hw4-10.4-asic qca-wifi-fw-hw4-10.4-emu_m2m qca-wifi-fw-hw4-10.4-emu_bb qca-thermald-10.4 qca-wifi-fw-hw6-10.4-asic qca-wifi-fw-hw7-10.4-asic qca-wifi-fw-hw10-10.4-asic athdiag kmod-qca-wil6210 wigig-firmware iwinfo kmod-bootconfig
+Target-Profile-Config: 
+
+@@
+Target-Profile-Description:
+	QSDK Standard package set configuration.
+	This profile provides basic Wi-Fi router features using the QCA Wi-Fi driver. It supports:
+	-Bridging and routing networking
+	-LuCI web configuration interface
+	-Integrated 11abgn/ac support using the qca-wifi driver
+@@
+
+Target-Profile: QSDK_Enterprise
+Target-Profile-Name: Qualcomm-Atheros SDK Enterprise Profile
+Target-Profile-Packages: luci uhttpd kmod-ipt-nathelper-extra luci-app-upnp kmod-usb-storage kmod-fs-msdos kmod-fs-ntfs kmod-fs-vfat kmod-sound-core kmod-sound-soc-ipq806x alsa kmod-ipt-ipopt ntfs-3g dosfsck e2fsprogs iozone fdisk mkdosfs kmod-ipt-conntrack-qos kmod-nls-cp437 kmod-nls-iso8859-1 sysstat mcproxy kmod-ipt-nathelper-rtsp kmod-ipv6 iperf devmem2 ip ethtool ip6tables ds-lite rstp quagga quagga-ripd quagga-zebra quagga-watchquagga quagga-vtysh rp-pppoe-relay -dnsmasq dnsmasq-dhcpv6 radvd wide-dhcpv6-client luci-app-samba luci-proto-6x4 bridge luci-app-ddns ddns-scripts mdadm kmod-md-mod kmod-md-linear kmod-md-raid0 kmod-md-raid1 iputils-tracepath iputils-tracepath6 kmod-qca-ssdk-nohnat qca-ssdk-shell file pure-ftpd kmod-qca-nss-drv-qdisc xl2tpd ppp-mod-pptp pm-utils kmod-qca-nss-macsec qca-thermald rng-tools perf kmod-nat-sctp kmod-aq_phy kmod-qca_85xx_sw aq-fw-download kmod-regmap-i2c i2c-tools qca-mcs-apps kmod-crypto-aes kmod-ipsec kmod-ipsec4 kmod-ipsec6 lacpd luci-app-openswan kmod-crypto-ocf kmod-qca-nss-ecm-noload kmod-openswan-nss openswan-nss kmod-qca-nss-crypto kmod-qca-nss-cfi kmod-qca-nss-drv-profile kmod-qca-nss-drv-capwapmgr qca-nss-fw2-enterprise kmod-qca-nss-drv-ipsecmgr qca-nss-fw2-enterprise_custA qca-nss-fw2-enterprise_custC kmod-qca-nss-drv-dtlsmgr kmod-qca-wifi-akronite-perf kmod-art2 qca-hostap-10.4 qca-hostapd-cli-10.4 qca-wpa-supplicant-10.4-macsec qca-wpa-cli-10.4 qca-spectral qca-wapid sigma-dut-10.4 qca-acfg qca-wrapd whc whc-ui qca-thermald-10.4 qca-wifi-fw-hw1-10.2 qca-wifi-fw-hw1-10.2-lteu qca-wifi-fw-hw1-10.2-maxclients qca-wifi-fw-hw2-10.2 kmod-bootconfig
+Target-Profile-Config: 
+
+@@
+Target-Profile-Description:
+	QSDK Enterprise package set configuration.
+@@
+
+Target-Profile: QSDK_Enterprise_Beeliner
+Target-Profile-Name: Qualcomm-Atheros SDK Enterprise Profile
+Target-Profile-Packages: luci uhttpd kmod-ipt-nathelper-extra luci-app-upnp kmod-usb-storage kmod-fs-msdos kmod-fs-ntfs kmod-fs-vfat kmod-sound-core kmod-sound-soc-ipq806x alsa kmod-ipt-ipopt ntfs-3g dosfsck e2fsprogs iozone fdisk mkdosfs kmod-ipt-conntrack-qos kmod-nls-cp437 kmod-nls-iso8859-1 sysstat mcproxy kmod-ipt-nathelper-rtsp kmod-ipv6 iperf devmem2 ip ethtool ip6tables ds-lite rstp quagga quagga-ripd quagga-zebra quagga-watchquagga quagga-vtysh rp-pppoe-relay -dnsmasq dnsmasq-dhcpv6 radvd wide-dhcpv6-client luci-app-samba luci-proto-6x4 bridge luci-app-ddns ddns-scripts mdadm kmod-md-mod kmod-md-linear kmod-md-raid0 kmod-md-raid1 iputils-tracepath iputils-tracepath6 kmod-qca-ssdk-nohnat qca-ssdk-shell file pure-ftpd kmod-qca-nss-drv-qdisc xl2tpd ppp-mod-pptp pm-utils kmod-qca-nss-macsec qca-thermald rng-tools perf kmod-nat-sctp kmod-aq_phy kmod-qca_85xx_sw aq-fw-download kmod-regmap-i2c i2c-tools qca-mcs-apps kmod-crypto-aes kmod-ipsec kmod-ipsec4 kmod-ipsec6 lacpd luci-app-openswan kmod-crypto-ocf kmod-qca-nss-ecm-noload kmod-openswan-nss openswan-nss kmod-qca-nss-crypto kmod-qca-nss-cfi kmod-qca-nss-drv-profile kmod-qca-nss-drv-capwapmgr qca-nss-fw2-enterprise kmod-qca-nss-drv-ipsecmgr qca-nss-fw2-enterprise_custA qca-nss-fw2-enterprise_custC kmod-qca-nss-drv-dtlsmgr kmod-qca-wifi-unified-profile kmod-art2 qca-hostap qca-hostapd-cli qca-wpa-supplicant-macsec qca-wpa-cli qca-wapid sigma-dut-10.4 qca-wpc qca-acfg qca-wrapd qca-spectral qcmbr-10.4 whc whc-ui qca-wifi-fw-hw2-10.4-asic qca-wifi-fw-hw3-10.4-asic qca-wifi-fw-hw4-10.4-asic qca-wifi-fw-hw4-10.4-emu_m2m qca-wifi-fw-hw4-10.4-emu_bb qca-thermald-10.4 qca-wifi-fw-hw6-10.4-asic qca-wifi-fw-hw7-10.4-asic qca-wifi-fw-hw10-10.4-asic athdiag kmod-bootconfig
+Target-Profile-Config: 
+
+@@
+Target-Profile-Description:
+	QSDK Enterprise package set configuration with Beeliner wifi support.
+@@
+
+

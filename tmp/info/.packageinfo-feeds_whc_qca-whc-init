@@ -1,0 +1,23 @@
+Source-Makefile: package/feeds/whc/qca-whc-init/Makefile
+Package: qca-whc-init
+Submenu: Whole Home Coverage features
+Version: 1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread 
+Menu-Depends: 
+Provides: 
+Section: QCA
+Category: QCA Proprietary software
+Title: Whole Home Coverage Init Script Helpers
+Maintainer: Qualcomm Atheros
+Source: 
+Type: ipkg
+Description:   This Package contains the script helper files for the Whole Home Coverage init scripts
+http://www.qca.qualcomm.com
+Qualcomm Atheros
+@@
+Config:
+  
+  
+@@
+
+

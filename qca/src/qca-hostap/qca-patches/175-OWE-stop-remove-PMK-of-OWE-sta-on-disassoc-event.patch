@@ -1,0 +1,30 @@
+diff --git a/src/ap/drv_callbacks.c b/src/ap/drv_callbacks.c
+index cb96171..c64388e 100644
+--- a/src/ap/drv_callbacks.c
++++ b/src/ap/drv_callbacks.c
+@@ -628,13 +628,18 @@ void hostapd_notif_disassoc(struct hostapd_data *hapd, const u8 *addr)
+ 			   MACSTR, MAC2STR(addr));
+ 		return;
+ 	}
+-
+-	ap_sta_set_authorized(hapd, sta, 0);
+-	sta->flags &= ~(WLAN_STA_AUTH | WLAN_STA_ASSOC);
+-	wpa_auth_sm_event(sta->wpa_sm, WPA_DISASSOC);
+-	sta->acct_terminate_cause = RADIUS_ACCT_TERMINATE_CAUSE_USER_REQUEST;
+-	ieee802_1x_notify_port_enabled(sta->eapol_sm, 0);
+-	ap_free_sta(hapd, sta);
++#ifdef CONFIG_OWE
++	if (!sta->owe_pmk) {
++#endif /* #ifdef CONFIG_OWE */
++		ap_sta_set_authorized(hapd, sta, 0);
++		sta->flags &= ~(WLAN_STA_AUTH | WLAN_STA_ASSOC);
++		wpa_auth_sm_event(sta->wpa_sm, WPA_DISASSOC);
++		sta->acct_terminate_cause = RADIUS_ACCT_TERMINATE_CAUSE_USER_REQUEST;
++		ieee802_1x_notify_port_enabled(sta->eapol_sm, 0);
++		ap_free_sta(hapd, sta);
++#ifdef CONFIG_OWE
++	}
++#endif /* #ifdef CONFIG_OWE */
+ }
+ 
+ 

@@ -1,0 +1,18 @@
+Source-Makefile: package/feeds/packages/rstp/Makefile
+Package: rstp
+Version: 2011-10-11-434d24bae108dbb21461a13a4abcf014afa8b029
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +kmod-qca-ssdk-nohnat
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Rapid Spanning Tree Protocol implement
+Maintainer: Stephen Hemminger <shemminger@vyatta.com>
+Source: rstp-2011-10-11-434d24bae108dbb21461a13a4abcf014afa8b029.tar.gz
+Type: ipkg
+Description: Rapid Spanning Tree Protocol implement
+http://git.kernel.org/cgit/linux/kernel/git/shemminger/rstp.git/
+Stephen Hemminger <shemminger@vyatta.com>
+@@
+
+

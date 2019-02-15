@@ -1,0 +1,43 @@
+Source-Makefile: package/feeds/packages/btconfig/Makefile
+Package: btconfig
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +bluez
+Menu-Depends: 
+Provides: 
+Section: utils
+Category: Utilities
+Title: btconfig Utils
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: 
+Type: ipkg
+Description:   This package contains the btconfig utility
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+Config:
+   	menu "overwrite package version"
+		depends on PACKAGE_btconfig
+	config btconfig_USE_CUSTOM_VERSION
+		depends on PACKAGE_btconfig
+		bool "Use custom package version"
+		default n
+
+	config btconfig_CUSTOM_VERSION
+		depends on btconfig_USE_CUSTOM_VERSION
+		string "btconfig version as string (default version: g)"
+		default "g"
+
+	endmenu
+   	menu "custom source directory"
+		depends on PACKAGE_btconfig
+	config btconfig_USE_CUSTOM_SOURCE_DIR
+		depends on PACKAGE_btconfig
+		bool "Use custom source directory"
+		default n
+	config btconfig_CUSTOM_SOURCE_DIR
+		depends on btconfig_USE_CUSTOM_SOURCE_DIR
+		string "Custom source directory"
+		default ""
+	endmenu
+@@
+
+

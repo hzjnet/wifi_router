@@ -1,0 +1,47 @@
+Source-Makefile: package/feeds/qca_lib/libwifisoncfg/Makefile
+Package: libwifisoncfg
+Submenu: Lib WiFi-SON Configuration
+Version: g-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +qca-cfg80211 +libhyficommon
+Menu-Depends: 
+Provides: 
+Build-Depends: PACKAGE_kmod-qca-wifi-unified-profile:qca-wifi PACKAGE_kmod-qca-wifi-akronite-perf:qca-wifi PACKAGE_kmod-qca-wifi-dakota-perf:qca-wifi PACKAGE_kmod-qca-wifi-perf:qca-wifi PACKAGE_kmod-qca-wifi-akronite-perf:qca-wifi PACKAGE_kmod-qca-wifi-perf:qca-wifi PACKAGE_kmod-qca-wifi-unified-perf:qca-wifi PACKAGE_kmod-qca-wifi-lowmem-profile:qca-wifi PACKAGE_kmod-qca-wifi-10.4-unified-profile:qca-wifi-10.4 PACKAGE_kmod-qca-wifi-10.4-akronite-perf:qca-wifi-10.4 PACKAGE_kmod-qca-wifi-10.4-dakota-perf:qca-wifi-10.4 PACKAGE_kmod-qca-wifi-10.4-perf:qca-wifi-10.4 PACKAGE_kmod-qca-wifi-10.4-unified-perf:qca-wifi-10.4 PACKAGE_kmod-qca-wifi-perf:qca-wifi :qca-wifi
+Section: QCA
+Category: QCA Proprietary software
+Title: Libwifisoncfg Library
+Maintainer: Qualcomm Atheros, Inc.
+Source: 
+Type: ipkg
+Description:   This Package contains the WiFi-SON Configuration layer support for WEXT and/or CFG80211
+http://www.qca.qualcomm.com
+Qualcomm Atheros, Inc.
+@@
+Config:
+  source "qca/feeds/qca-lib/libwifisoncfg/Config.in"
+  	menu "overwrite package version"
+		depends on PACKAGE_libwifisoncfg
+	config libwifisoncfg_USE_CUSTOM_VERSION
+		depends on PACKAGE_libwifisoncfg
+		bool "Use custom package version"
+		default n
+
+	config libwifisoncfg_CUSTOM_VERSION
+		depends on libwifisoncfg_USE_CUSTOM_VERSION
+		string "libwifisoncfg version as string (default version: g)"
+		default "g"
+
+	endmenu
+  	menu "custom source directory"
+		depends on PACKAGE_libwifisoncfg
+	config libwifisoncfg_USE_CUSTOM_SOURCE_DIR
+		depends on PACKAGE_libwifisoncfg
+		bool "Use custom source directory"
+		default n
+	config libwifisoncfg_CUSTOM_SOURCE_DIR
+		depends on libwifisoncfg_USE_CUSTOM_SOURCE_DIR
+		string "Custom source directory"
+		default ""
+	endmenu
+@@
+
+

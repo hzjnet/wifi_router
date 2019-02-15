@@ -1,0 +1,12 @@
+logger "$BUTTON pressed for $SEEN seconds  $ACTION"
+
+
+if [ "$ACTION" = "released" -a "$BUTTON" = "reset" ]; then
+        if [ "$SEEN" -gt 1 ]; then
+                logger "FACTORY RESET"
+                if [ -f /sbin/system_reset.sh ]; then
+                        /sbin/system_reset.sh
+                fi       
+        fi
+fi
+

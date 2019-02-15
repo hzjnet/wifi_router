@@ -1,0 +1,178 @@
+Source-Makefile: package/qca-nss-clients/Makefile
+Package: kmod-qca-nss-drv-portifmgr
+Submenu: Network Devices
+Version: <LINUX_VERSION>+g-2
+Depends: kmod-qca-nss-drv
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: NSS Portif Manager for QCA NSS driver (IPQ806x)
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-nss-clients-g.tar.gz
+Type: ipkg
+Description: NSS Portif Manager for QCA NSS driver (IPQ806x)
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: kmod-qca-nss-drv-profile
+Submenu: Network Devices
+Version: <LINUX_VERSION>+g-2
+Depends: kmod-qca-nss-drv
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Profiler for QCA NSS driver (IPQ806x)
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-nss-clients-g.tar.gz
+Type: ipkg
+Description: Profiler for QCA NSS driver (IPQ806x)
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: kmod-qca-nss-drv-capwapmgr
+Submenu: Network Devices
+Version: <LINUX_VERSION>+g-2
+Depends: kmod-qca-nss-drv +libnl
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: NSS CAPWAP Manager for QCA NSS driver (IPQ806x)
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-nss-clients-g.tar.gz
+Type: ipkg
+Description: NSS CAPWAP Manager for QCA NSS driver (IPQ806x)
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: kmod-qca-nss-drv-tun6rd
+Submenu: Network Devices
+Version: <LINUX_VERSION>+g-2
+Depends: kmod-qca-nss-drv +kmod-sit
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Kernel driver for NSS (connection manager) - tun6rd
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-nss-clients-g.tar.gz
+Type: ipkg
+Description: Kernel driver for NSS (connection manager) - tun6rd
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: kmod-qca-nss-drv-dtlsmgr
+Submenu: Network Devices
+Version: <LINUX_VERSION>+g-2
+Depends: @TARGET_ipq806x +kmod-qca-nss-drv +kmod-qca-nss-crypto
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Kernel driver for NSS (connection manager) - dtlsmgr
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-nss-clients-g.tar.gz
+Type: ipkg
+Description: Kernel driver for NSS (connection manager) - dtlsmgr
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: kmod-qca-nss-drv-l2tpv2
+Submenu: Network Devices
+Version: <LINUX_VERSION>+g-2
+Depends: kmod-qca-nss-drv +kmod-l2tp
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Kernel driver for NSS (connection manager) - l2tp
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-nss-clients-g.tar.gz
+Type: ipkg
+Description: Kernel driver for NSS (connection manager) - l2tp
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: kmod-qca-nss-drv-pptp
+Submenu: Network Devices
+Version: <LINUX_VERSION>+g-2
+Depends: kmod-qca-nss-drv +kmod-pptp
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Kernel driver for NSS (connection manager) - PPTP
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-nss-clients-g.tar.gz
+Type: ipkg
+Description: Kernel driver for NSS (connection manager) - PPTP
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: kmod-qca-nss-drv-tunipip6
+Submenu: Network Devices
+Version: <LINUX_VERSION>+g-2
+Depends: kmod-qca-nss-drv +kmod-iptunnel6 +kmod-ip6-tunnel
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Kernel driver for NSS (connection manager) - DS-lite and ipip6 Tunnel
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-nss-clients-g.tar.gz
+Type: ipkg
+Description: Kernel driver for NSS (connection manager) - DS-lite and ipip6 Tunnel
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: kmod-qca-nss-drv-qdisc
+Submenu: Network Devices
+Version: <LINUX_VERSION>+g-2
+Depends: kmod-qca-nss-drv
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Qdisc for configuring shapers in NSS
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-nss-clients-g.tar.gz
+Type: ipkg
+Description: Qdisc for configuring shapers in NSS
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: kmod-qca-nss-drv-ipsecmgr
+Submenu: Network Devices
+Version: <LINUX_VERSION>+g-2
+Depends: kmod-qca-nss-drv +kmod-qca-nss-crypto
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Kernel driver for NSS (ipsec manager) - ipsecmgr
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-nss-clients-g.tar.gz
+Type: ipkg
+Description: Kernel driver for NSS (ipsec manager) - ipsecmgr
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+Package: kmod-qca-nss-drv-netlink
+Submenu: Network Devices
+Version: <LINUX_VERSION>+g-2
+Depends: kmod-qca-nss-drv
+Menu-Depends: 
+Provides: 
+Section: kernel
+Category: Kernel modules
+Title: Kernel driver for NSS (NETLINK) - netlink
+Maintainer: OpenWrt Developers Team <openwrt-devel@openwrt.org>
+Source: qca-nss-clients-g.tar.gz
+Type: ipkg
+Description: Kernel driver for NSS (NETLINK) - netlink
+OpenWrt Developers Team <openwrt-devel@openwrt.org>
+@@
+
+

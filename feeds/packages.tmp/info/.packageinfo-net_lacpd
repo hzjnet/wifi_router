@@ -1,0 +1,17 @@
+Source-Makefile: feeds/packages/net/lacpd/Makefile
+Package: lacpd
+Version: g7fb2fec-1
+Depends: +libc +USE_EGLIBC:librt +USE_EGLIBC:libpthread +libubox +libuci +libubus +ubus +ubusd +kmod-qca-ssdk-nohnat
+Menu-Depends: 
+Provides: 
+Section: net
+Category: Network
+Title: Link aggregation control protocol Daemon
+Maintainer: Xiaoping Fan <xfan@codeaurora.org>
+Source: lacpd-g7fb2fec.tar.gz
+Type: ipkg
+Description: Link aggregation control protocol Daemon
+Xiaoping Fan <xfan@codeaurora.org>
+@@
+
+

@@ -1,0 +1,14 @@
+*.o
+.DS_Store
+.*.swp
+/bin
+/dl
+/build_dir
+/staging_dir
+*.orig
+*.rej
+*~
+.#*
+*#
+.emacs.desktop*
+TAGS*~

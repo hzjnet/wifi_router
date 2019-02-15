@@ -1,0 +1,12 @@
+diff --git a/hostapd/Makefile b/hostapd/Makefile
+index 418ab95..7bf4c85 100644
+--- a/hostapd/Makefile
++++ b/hostapd/Makefile
+@@ -307,6 +307,7 @@ OBJS += ../src/common/sae.o
+ NEED_ECC=y
+ NEED_DH_GROUPS=y
+ NEED_AP_MLME=y
++NEED_DH_GROUPS_ALL=y
+ endif
+ 
+ ifdef CONFIG_OWE

@@ -1,0 +1,7 @@
+# LIBWIFISONCFG configs
+config LIBCFG80211_SUPPORT
+        bool "libwifison CFG80211 support"
+        depends on PACKAGE_qca-cfg80211
+        default y
+        help
+            Enable CFG80211 support for libwifisoncfg library
